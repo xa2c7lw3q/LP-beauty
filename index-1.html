@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYANA セラム ｜ 濃密うるおい美容液</title>
+<meta name="description" content="一滴で、満ちる肌へ。発酵うるおい成分を高濃度配合した夜用美容液 AYANA セラム。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#faf4ec;
+    --cream:#f3e7d8;
+    --wine:#6b1f33;
+    --wine-deep:#4d1325;
+    --blush:#d99a86;
+    --rose:#e9c4b4;
+    --gold:#b08a55;
+    --ink:#3a2b29;
+    --muted:#8a766f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .mincho{font-family:"Shippori Mincho",serif;}
+  .wrap{max-width:480px;margin:0 auto;background:var(--ivory);position:relative;
+    box-shadow:0 0 80px rgba(77,19,37,.08);}
+  img{max-width:100%;display:block;}
+  .en{font-family:"Shippori Mincho",serif;letter-spacing:.18em;}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;padding:64px 28px 80px;text-align:center;overflow:hidden;
+    background:
+      radial-gradient(120% 80% at 80% 0%, rgba(217,154,134,.45), transparent 60%),
+      radial-gradient(110% 70% at 10% 30%, rgba(233,196,180,.5), transparent 55%),
+      linear-gradient(180deg,#f7ead9 0%, var(--ivory) 100%);
+  }
+  .hero::after{
+    content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);
+    width:200%;height:60px;background:var(--ivory);border-radius:50% 50% 0 0/100% 100% 0 0;
+  }
+  .brandmark{font-size:12px;letter-spacing:.5em;color:var(--gold);margin-bottom:24px;
+    opacity:0;animation:rise .9s .1s forwards;}
+  .hero h1{
+    font-family:"Shippori Mincho",serif;font-weight:700;font-size:34px;line-height:1.5;
+    color:var(--wine-deep);margin-bottom:18px;letter-spacing:.04em;
+    opacity:0;animation:rise 1s .25s forwards;
+  }
+  .hero h1 .big{font-size:46px;display:inline-block;}
+  .hero .lead{font-size:14px;color:var(--muted);margin-bottom:34px;
+    opacity:0;animation:rise 1s .45s forwards;}
+  .bottle{width:150px;margin:0 auto 30px;opacity:0;animation:rise 1.1s .35s forwards;}
+  .badge{
+    display:inline-block;background:var(--wine);color:#fff;font-size:11px;letter-spacing:.2em;
+    padding:7px 18px;border-radius:30px;margin-bottom:22px;
+    opacity:0;animation:rise 1s .15s forwards;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+
+  /* ===== CTA buttons ===== */
+  .cta{
+    display:inline-block;text-decoration:none;font-weight:700;letter-spacing:.05em;
+    color:#fff;background:linear-gradient(135deg,var(--wine) 0%, var(--blush) 130%);
+    padding:18px 44px;border-radius:50px;font-size:16px;
+    box-shadow:0 12px 28px rgba(107,31,51,.35);position:relative;overflow:hidden;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .cta:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(107,31,51,.4);}
+  .cta .sub{display:block;font-size:11px;font-weight:400;opacity:.85;letter-spacing:.15em;margin-bottom:2px;}
+  .cta-hero{opacity:0;animation:rise 1s .6s forwards;}
+
+  section{padding:62px 28px;position:relative;}
+  .eyebrow{text-align:center;color:var(--gold);font-size:12px;letter-spacing:.35em;margin-bottom:10px;}
+  .sec-title{font-family:"Shippori Mincho",serif;text-align:center;font-size:26px;
+    color:var(--wine-deep);line-height:1.5;margin-bottom:36px;font-weight:600;}
+  .sec-title small{display:block;font-size:14px;color:var(--muted);margin-top:8px;font-family:"Zen Kaku Gothic New";font-weight:400;}
+
+  /* ===== Problems ===== */
+  .problems{background:linear-gradient(180deg,#f1e2d2,#ede0d4);}
+  .prob-list{display:flex;flex-direction:column;gap:14px;}
+  .prob{background:#fff;border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:14px;
+    box-shadow:0 8px 20px rgba(107,31,51,.06);font-size:15px;}
+  .prob .chk{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--rose);
+    display:grid;place-items:center;color:var(--wine);font-weight:700;}
+  .prob-note{text-align:center;margin-top:28px;font-family:"Shippori Mincho",serif;
+    font-size:18px;color:var(--wine);}
+
+  /* ===== Reasons ===== */
+  .reason{margin-bottom:44px;}
+  .reason:last-child{margin-bottom:0;}
+  .reason .num{font-family:"Shippori Mincho",serif;font-size:13px;letter-spacing:.3em;color:var(--gold);
+    border-bottom:1px solid var(--rose);padding-bottom:8px;margin-bottom:16px;display:flex;
+    justify-content:space-between;align-items:baseline;}
+  .reason .num b{font-size:40px;color:var(--wine);line-height:1;}
+  .reason h3{font-family:"Shippori Mincho",serif;font-size:21px;color:var(--wine-deep);margin-bottom:12px;line-height:1.5;}
+  .reason p{font-size:14px;color:var(--muted);}
+  .reason .visual{height:170px;border-radius:18px;margin-top:18px;
+    background:linear-gradient(135deg,var(--rose),var(--blush));position:relative;overflow:hidden;}
+  .reason .visual span{position:absolute;inset:0;display:grid;place-items:center;
+    font-family:"Shippori Mincho",serif;color:#fff;font-size:15px;letter-spacing:.2em;
+    text-shadow:0 2px 12px rgba(77,19,37,.25);}
+
+  /* ===== Ingredients ===== */
+  .ingredients{background:var(--wine-deep);color:#f4e7da;}
+  .ingredients .eyebrow{color:var(--rose);}
+  .ingredients .sec-title{color:#fff;}
+  .ingredients .sec-title small{color:#d9b9a8;}
+  .ing-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .ing{background:rgba(255,255,255,.06);border:1px solid rgba(217,154,134,.25);
+    border-radius:14px;padding:20px 16px;text-align:center;}
+  .ing .dot{width:46px;height:46px;border-radius:50%;margin:0 auto 12px;
+    background:linear-gradient(135deg,var(--blush),var(--gold));}
+  .ing h4{font-family:"Shippori Mincho",serif;font-size:15px;margin-bottom:6px;color:#fff;}
+  .ing p{font-size:12px;color:#cfa897;line-height:1.7;}
+
+  /* ===== Voices ===== */
+  .voices{background:linear-gradient(180deg,var(--ivory),#f1e2d2);}
+  .voice{background:#fff;border-radius:18px;padding:24px 22px;margin-bottom:16px;
+    box-shadow:0 10px 26px rgba(107,31,51,.07);}
+  .voice .stars{color:var(--gold);letter-spacing:3px;margin-bottom:10px;}
+  .voice p{font-size:14px;margin-bottom:14px;}
+  .voice .who{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);}
+  .voice .who i{width:34px;height:34px;border-radius:50%;background:var(--rose);display:block;}
+
+  /* ===== Offer ===== */
+  .offer{background:radial-gradient(120% 90% at 50% 0%,#7d2440,var(--wine-deep));color:#fff;text-align:center;}
+  .offer .eyebrow{color:var(--rose);}
+  .limited{display:inline-block;border:1px solid var(--rose);color:var(--rose);
+    font-size:12px;letter-spacing:.25em;padding:6px 16px;border-radius:30px;margin-bottom:20px;}
+  .price-row{display:flex;align-items:flex-end;justify-content:center;gap:14px;margin:10px 0 6px;}
+  .price-old{color:#c79a8b;text-decoration:line-through;font-size:18px;}
+  .price-now{font-family:"Shippori Mincho",serif;font-size:54px;line-height:1;color:#fff;}
+  .price-now small{font-size:18px;}
+  .off-tag{background:var(--rose);color:var(--wine-deep);font-weight:700;border-radius:8px;
+    padding:4px 10px;font-size:14px;display:inline-block;margin-bottom:24px;}
+  .offer .note{font-size:12px;color:#dab9a9;margin-top:16px;}
+
+  /* ===== FAQ ===== */
+  .faq details{background:#fff;border-radius:14px;margin-bottom:12px;overflow:hidden;
+    box-shadow:0 6px 16px rgba(107,31,51,.05);}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:500;font-size:14px;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .q{color:var(--wine);font-family:"Shippori Mincho",serif;flex-shrink:0;}
+  .faq summary .ic{margin-left:auto;transition:transform .3s;color:var(--gold);}
+  .faq details[open] summary .ic{transform:rotate(45deg);}
+  .faq .ans{padding:0 20px 18px;font-size:13px;color:var(--muted);}
+
+  footer{background:var(--wine-deep);color:#c79a8b;text-align:center;padding:40px 28px 110px;font-size:11px;letter-spacing:.1em;}
+  footer .fbrand{font-family:"Shippori Mincho",serif;color:#fff;font-size:20px;letter-spacing:.4em;margin-bottom:14px;}
+
+  /* ===== fixed mobile CTA ===== */
+  .fixed-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;max-width:480px;margin:0 auto;
+    padding:12px 18px calc(12px + env(safe-area-inset-bottom));
+    background:linear-gradient(180deg,rgba(250,244,236,0),var(--ivory) 38%);
+    display:flex;justify-content:center;
+    transform:translateY(120%);transition:transform .4s ease;}
+  .fixed-cta.show{transform:none;}
+  .fixed-cta .cta{width:100%;text-align:center;padding:16px;}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s, transform .8s;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(min-width:481px){.wrap{margin:30px auto;border-radius:8px;overflow:hidden;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="badge">夜だけのスペシャルケア</div>
+    <div class="brandmark en">AYANA — NIGHT SERUM</div>
+    <h1>一滴で、満ちる。<br><span class="big mincho">濃密うるおい</span><br>美容液</h1>
+    <svg class="bottle" viewBox="0 0 120 200" fill="none">
+      <rect x="38" y="6" width="44" height="20" rx="4" fill="#4d1325"/>
+      <rect x="44" y="24" width="32" height="16" fill="#6b1f33"/>
+      <path d="M30 40h60c6 0 10 5 10 11v118c0 9-7 16-16 16H36c-9 0-16-7-16-16V51c0-6 4-11 10-11z" fill="url(#g)"/>
+      <rect x="34" y="78" width="52" height="74" rx="6" fill="#fff" opacity=".88"/>
+      <text x="60" y="112" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="13" fill="#6b1f33" letter-spacing="2">AYANA</text>
+      <text x="60" y="132" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="8" fill="#b08a55" letter-spacing="3">SERUM</text>
+      <ellipse cx="48" cy="60" rx="14" ry="26" fill="#fff" opacity=".15"/>
+      <defs><linearGradient id="g" x1="20" y1="40" x2="100" y2="185" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#e9c4b4"/><stop offset="1" stop-color="#d99a86"/></linearGradient></defs>
+    </svg>
+    <p class="lead">発酵うるおい成分を高濃度配合。<br>朝、ふっくらと手応えのある肌へ。</p>
+    <a href="#offer" class="cta cta-hero"><span class="sub">本日限定50%OFF</span>今すぐ試してみる</a>
+  </header>
+
+  <!-- PROBLEMS -->
+  <section class="problems reveal">
+    <p class="eyebrow en">CHECK</p>
+    <h2 class="sec-title">こんなお悩み、<br>ありませんか？</h2>
+    <div class="prob-list">
+      <div class="prob"><span class="chk">✓</span>夕方になると肌がごわつき、化粧ノリが悪い</div>
+      <div class="prob"><span class="chk">✓</span>保湿してもすぐ乾燥してしまう</div>
+      <div class="prob"><span class="chk">✓</span>最近、ハリやツヤが足りない気がする</div>
+      <div class="prob"><span class="chk">✓</span>スキンケアの種類が多くて続かない</div>
+    </div>
+    <p class="prob-note">そのお悩み、<br>“夜の一滴”で変わるかもしれません。</p>
+  </section>
+
+  <!-- REASONS -->
+  <section class="reveal">
+    <p class="eyebrow en">REASON</p>
+    <h2 class="sec-title">選ばれる、3つの理由</h2>
+
+    <div class="reason">
+      <div class="num en"><span>POINT</span><b>01</b></div>
+      <h3>高濃度の発酵うるおい成分</h3>
+      <p>独自の発酵エキスを贅沢に配合。角層のすみずみまでうるおいで満たし、翌朝のもっちり感を実感していただけます。</p>
+      <div class="visual"><span>濃密チャージ処方</span></div>
+    </div>
+
+    <div class="reason">
+      <div class="num en"><span>POINT</span><b>02</b></div>
+      <h3>とろけるテクスチャー</h3>
+      <p>肌にのせた瞬間にとろけ、すっと浸透。べたつかず、これ一本でうるおいケアが完結します。</p>
+      <div class="visual" style="background:linear-gradient(135deg,#e9c4b4,#b08a55)"><span>1本完結ケア</span></div>
+    </div>
+
+    <div class="reason">
+      <div class="num en"><span>POINT</span><b>03</b></div>
+      <h3>5つの無添加・国内製造</h3>
+      <p>パラベン・合成香料・着色料など5つの不使用。敏感な夜の肌にも、安心して使い続けられます。</p>
+      <div class="visual" style="background:linear-gradient(135deg,#d99a86,#6b1f33)"><span>5 FREE / Made in Japan</span></div>
+    </div>
+  </section>
+
+  <!-- INGREDIENTS -->
+  <section class="ingredients reveal">
+    <p class="eyebrow en">INGREDIENTS</p>
+    <h2 class="sec-title">うるおいを育む、4つの成分<small>厳選された美容成分を凝縮しました</small></h2>
+    <div class="ing-grid">
+      <div class="ing"><div class="dot"></div><h4>発酵プラセンタ</h4><p>ハリとツヤを与え、ふっくら肌へ導く</p></div>
+      <div class="ing"><div class="dot"></div><h4>3種のヒアルロン酸</h4><p>うるおいを抱え込み、乾燥から守る</p></div>
+      <div class="ing"><div class="dot"></div><h4>セラミドNP</h4><p>うるおいバリアを整え、なめらかに</p></div>
+      <div class="ing"><div class="dot"></div><h4>ビタミンC誘導体</h4><p>透明感のある明るい印象へ</p></div>
+    </div>
+  </section>
+
+  <!-- VOICES -->
+  <section class="voices reveal">
+    <p class="eyebrow en">VOICE</p>
+    <h2 class="sec-title">お客様の声</h2>
+    <div class="voice">
+      <div class="stars">★★★★★</div>
+      <p>朝起きたときの肌の手触りが本当に変わりました。とろみのある美容液なのにベタつかず、メイク前でも使いやすいです。</p>
+      <div class="who"><i></i>30代・乾燥肌 / M.K さん</div>
+    </div>
+    <div class="voice">
+      <div class="stars">★★★★★</div>
+      <p>いくつも試してきましたが、これは続けられそう。一本で済むのでスキンケアが楽になりました。</p>
+      <div class="who"><i></i>40代・混合肌 / Y.S さん</div>
+    </div>
+    <div class="voice">
+      <div class="stars">★★★★☆</div>
+      <p>香りがほとんどなく、敏感肌の私でも安心。容器も上品でお気に入りです。</p>
+      <div class="who"><i></i>20代・敏感肌 / A.T さん</div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="offer reveal" id="offer">
+    <p class="eyebrow en">SPECIAL OFFER</p>
+    <h2 class="sec-title mincho" style="color:#fff">初めての方へ<br>特別なご案内</h2>
+    <div class="limited en">★ 本日限定 / 先着300名様 ★</div>
+    <div class="price-row">
+      <span class="price-old">¥6,800</span>
+      <span class="price-now mincho">¥3,400<small>（税込）</small></span>
+    </div>
+    <div class="off-tag">50%OFF + 送料無料</div>
+    <p style="margin-bottom:26px;font-size:14px;color:#f0d6c8">まずは1本、夜のお手入れに。<br>30日間の返金保証つきだから安心です。</p>
+    <a href="#" class="cta" style="background:linear-gradient(135deg,#e9c4b4,#fff);color:#6b1f33;"><span class="sub" style="color:#9a5b48">＼ 最短2分で完了 ／</span>特別価格で申し込む</a>
+    <p class="note">※定期縛りなし・いつでも解約可能</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal">
+    <p class="eyebrow en">Q&A</p>
+    <h2 class="sec-title">よくあるご質問</h2>
+    <details><summary><span class="q">Q.</span>どのタイミングで使えばいい？<span class="ic">＋</span></summary>
+      <div class="ans">夜のお手入れの最後、クリームの前にお使いください。化粧水のあとの導入美容液としてもお使いいただけます。</div></details>
+    <details><summary><span class="q">Q.</span>敏感肌でも使えますか？<span class="ic">＋</span></summary>
+      <div class="ans">5つの無添加処方で、敏感な肌にも配慮しています。心配な方はパッチテストをおすすめします。</div></details>
+    <details><summary><span class="q">Q.</span>定期購入の縛りはありますか？<span class="ic">＋</span></summary>
+      <div class="ans">回数の縛りはありません。いつでも解約・休止が可能です。</div></details>
+  </section>
+
+  <footer>
+    <div class="fbrand en">AYANA</div>
+    <p>※本ページはポートフォリオ用のサンプルLPです。<br>架空の商品・内容を掲載しています。</p>
+    <p style="margin-top:14px;">© AYANA Sample Landing Page</p>
+  </footer>
+
+</div>
+
+<!-- FIXED CTA -->
+<div class="fixed-cta" id="fixedCta">
+  <a href="#offer" class="cta"><span class="sub">本日限定50%OFF・送料無料</span>特別価格で試してみる</a>
+</div>
+
+<script>
+  // scroll reveal
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // fixed cta after hero
+  const hero=document.querySelector('.hero'), fc=document.getElementById('fixedCta');
+  const ho=new IntersectionObserver((es)=>{es.forEach(e=>{fc.classList.toggle('show',!e.isIntersecting);});},{threshold:0});
+  ho.observe(hero);
+</script>
+</body>
+</html>
